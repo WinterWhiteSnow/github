@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Job results</title>
+	<style>
+		body {
+    		font-family: serif;
+			font-color:black;
+		}
+		a {
+			text-decoration-line: None;
+		}
+		header {
+			font-size:40px;
+			text-align:center;
+    		padding-top: 150px;
+		}
+		.top {
+			border:None;
+			border-radius: 85px;
+			font-size:30px;
+			height:52px;
+			width:140px;
+		}
+		button:active {
+			box-shadow: 2px 2px 2px rgba(172, 172, 172, 0.25);
+		}
+		ul {
+			text-align:center;
+			list-style: none;
+    		padding-left: 0px;
+		}
+		li {
+			font-size:35px;
+			padding-top:20px;
+			padding-bottom:20px;
+		}
+		.bottom {
+			width:100px;
+			height:40px;
+			border:None;
+			font-size:30px;
+			border-radius: 85px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Job results</h1>
+		<h3>{{word}} : {{number}} jobs founded</h3>
+			<button class="top"><a href="/" name="word={{word}}">back</a></button>
+			<button class="top"><a href="/export?word={{word}}">export</a></button>		
+		<hr>
+	</header>
+	<main>
+		{% for i in result%}
+			<ul>
+				<li>
+					<div>{{i.title}}						
+					{{i.company}}					
+					<button class="bottom">
+						<a href={{i.link}} target="_blank">apply</a>
+					</button>
+					</div>
+				</li>
+			</ul>
+		{% endfor %}
+	</main>	
+</body>
+</html>

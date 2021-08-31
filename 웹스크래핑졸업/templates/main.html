@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>jobs search</title>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			font-weight: lighter;
+    		font-family: serif;
+			padding-top: 200px;
+		}
+		h1 {
+			font-size:100px;
+			text-align:center;
+		}
+		form {
+			text-align:center;
+		}
+		input {
+			width:700px;
+			height:100px;
+			border-radius: 85px;
+			text-align:center;
+			text-size:100px;
+			font-size:40px;
+			font-weight:None;
+		}
+		input::placeholder {
+			font-size:40px;
+    		font-family: serif;
+		}
+		.wow {
+			padding-top: 20px;
+		}
+		span {
+			font-size:35px;
+			padding-bottom:10px;
+			margin:None;
+			font-weight: None;
+			font-family: None;
+		}
+		.button {
+			padding-top:20px;
+		}
+		button {
+			width:100px;
+			height:50px;
+			border:None;
+			border-radius: 85px;
+			font-size:25px;
+		}
+		a {
+			text-decoration-line: None;
+		}
+		button:active {
+			box-shadow: 2px 2px 2px rgba(172, 172, 172, 0.25);
+		}
+		
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1 class="hello">Hello Jobs!</h1>
+	</header>
+	<main>
+		<form action="/search" method="get">
+			<input type="text" placeholder="enter a job you want!" name="word" autocomplete="on" required />
+			<div class="wow">
+				<span>Previous search</span>
+				<div class="button">
+					{%for i in previous_word%}
+						<button name="word"><a href="/search?word={{i}}">{{i}}</a></button>
+					{%endfor%}
+				</div>
+			</div>
+		</form>
+	</main>
+</body>
+</html>

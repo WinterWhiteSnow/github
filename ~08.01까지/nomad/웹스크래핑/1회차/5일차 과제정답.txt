@@ -1,0 +1,47 @@
+<<<<html>>>>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Where are you from?</h1>
+    <select class="js-select">
+      <option value="NONE">--- Choose Your Country ---</option>
+      <option value="KR">Korea</option>
+      <option value="GR">Greece</option>
+      <option value="TR">Turkey</option>
+      <option value="FI">Finland</option>
+    </select>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+
+
+<<<<<css>>>>>
+body {
+  font-family: sans-serif;
+}
+
+<<<<<js>>>>
+import "./styles.css";
+
+const select = document.querySelector(".js-select");
+
+function handleChange() {
+  const selected = select.value;
+  localStorage.setItem("country", selected);
+}
+
+function loadCountries() {
+  const selected = localStorage.getItem("country");
+  if (selected) {
+    const option = document.querySelector(`option[value="${selected}"]`);
+    option.selected = true;
+  }
+}
+
+loadCountries();
+select.addEventListener("change", handleChange);

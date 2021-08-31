@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+	<title>Reddit Reader</title>
+</head>
+
+<body>
+	<header>
+		<h1><a href="/">Reddit Reader</a></h1>
+		<h3>Reading:
+			{%for i in word%}
+				r/{{i}}
+			{%endfor%} 
+		</h3>
+	</header>
+	<main>
+		{%for i in wow%}
+			<div>
+				<h3>
+					<a href="https://www.reddit.com{{i.link}}" target="_blank">{{i.title}}</a>
+				</h3>
+				<h4>{{i.vote_point}} upvotes | r/{{i.word}}</h4>
+				<hr>
+			</div>
+		{%endfor%}
+	</main> 
+</body>
+
+</html>

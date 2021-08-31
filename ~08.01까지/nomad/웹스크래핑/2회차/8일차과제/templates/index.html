@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  {% if standard == 'popular' %}
+    <title>Nomad New | popular </title>
+  {% elif standard == 'new' %}
+    <title>Nomad New | new </title>
+  {% endif %}  
+</head>
+
+<body>
+  <form action="/" method="get">
+  <header>Nomad New
+    <div>
+      {% if standard == 'popular' %}
+        Order by : <strong>popular</strong>
+        |
+        <a href="/?order_by=new">New</a>
+      {% elif standard == 'new' %}
+        Order by : <a href="/?order_by=popular">popular</a>
+        |
+        <strong>New</strong>
+      {% endif %}
+    </div>
+  </header>
+  {% for i in wow%}
+    <a href="/{{i.id}}">
+    <h3>{{i.title}} </h3> </a> <a href="{{i.url}}"> ({{i.url}})</a><br>
+    <div>{{i.point}} points | By : {{i.author}} | {{i.num_comment}} comments</div>
+    <br>
+  {% endfor %} 
+  </form>
+</body>
+
+</html>

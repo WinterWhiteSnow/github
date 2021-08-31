@@ -1,0 +1,143 @@
+/* h1 {
+    text-align: center;
+    width: 800px;
+    margin-bottom: 0px;
+    font-weight: bold;   
+} */
+
+.secondtext input{
+    border-top: None;
+    border-left: None;
+    border-right: None;
+    border-color: rgb(255, 255, 255);
+    background: none;
+    text-align:center;
+    outline:none;
+    color: rgb(255, 255, 255);
+    font-size:35px;
+    font-weight: None;
+}
+
+.secondtext .dolist {
+    color: rgb(255, 255, 255);
+    list-style: none;
+    font-size: 45px;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+.secondtext .dolist span{
+    color : white;
+    font-size : 50px;
+    padding-top : 15px;
+}
+
+.secondtext .dolist input {
+    width: 30px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.secondtext .clock {
+    height: 25px;
+    font-size: 150px;
+    font-weight: lighter;
+    font-family: serif;
+    color: rgb(255, 255, 255);
+    border: Null;
+    padding: 6px 12px 6px 12px;
+}
+.secondtext h4 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: None;
+    font-weight: lighter;
+    margin-top: 80px; 
+    margin-bottom: 10px; 
+}
+
+.secondtext button{
+    width: 30px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.secondtext .dolist #check:checked + label{
+    background-color: #ff0000;
+}
+
+.firsttext{
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;   
+}    
+
+#welcome{
+    font-size: 50px;
+    font-family: serif;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    text-align: center; 
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* background-image: url("img/0.jpg"); */
+    background-repeat: no-repeat;
+    background-size : cover ;
+    /* background: linear-gradient( #e66465, #9198e5); */
+    text-align: center;
+    font-weight: bold;   
+}
+.firsttext .name {
+    width: 680px;
+    height: 100px;
+    border-top: None;
+    border-left: None;
+    border-right: None;
+    border-color: rgb(255, 255, 255);
+    background: none;
+    text-align:center;
+    color: rgb(255, 255, 255);
+    font-size:50px;
+    outline:none;
+}
+.delet{
+    font-size: 20px;
+    font-family: serif;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.103);
+    border-radius: 100px;
+    border: 0px;
+    padding: 6px 12px 6px 12px;
+}
+
+.change{
+    height: 35px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: serif;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 85px;
+    border: 0px;
+    padding: 6px 12px 6px 12px;
+}
+
+
+button:active {
+    box-shadow: 2px 2px 2px rgba(172, 172, 172, 0.25);
+  }
+
+.hidden{
+    display: none;
+}
+
+.textThrough {
+    text-decoration:line-through;
+}

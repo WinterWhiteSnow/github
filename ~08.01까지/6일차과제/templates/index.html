@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <h1>Nomad News</h1>
+    <div> Order by:
+      <strong>Popular</strong>
+      |
+      <a href="/order_by=new">New</a>
+    </div>
+
+      {% for i in nomad_news %}
+      <h1>{{i.title}}</h1><h1>{{i.url}}</h1>
+      <h3>{{i.points}}points | by:{{author}} | {{comments}}comments</h3>
+      {% endfor %}
+
+</body>
+
+</html>

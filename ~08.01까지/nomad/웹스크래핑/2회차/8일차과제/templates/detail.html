@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  <title>Nomad New | {{comments.title}} </title>
+</head>
+
+<body>
+  <header>
+    <h1>{{comments.title}}<h1>
+    <div>{{comments.point}} point | by {{comments.author}} | <a href="{{comments.url}}">{{comments.url}}</a></div>
+  </header>
+    {% for i in comments.list%}
+      {% autoescape false %}
+        {% if i.author and i.text %}
+          <main>
+            <strong>{{i.author}}</strong>
+            <p>{{i.text}}</p>
+          </main>
+        {% else %}
+          <main>      
+            <div>{{i}}</div>
+            <br>
+          </main>    
+        {% endif %}  
+      {% endautoescape %}
+    {% endfor %}
+</body>
+
+</html>

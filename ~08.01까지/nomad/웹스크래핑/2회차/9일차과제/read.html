@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header><a href="/"><h1>Reddit Reader</h1></a>
+    <h3> reading :
+      {% for i in language%}   
+        {{i}}
+      {% endfor %}  
+  </header>
+    {% for i in content%}
+      {% autoescape false %}
+        {% if i.title and i.link %}
+          <main>
+            <strong><a href="i.link">{{i.title}}</a></strong>
+            <p>{{i.upvotes}} upvotes | {{i.language}}</p>
+          </main>
+        {% else %}
+          <main>      
+          </main>    
+        {% endif %}  
+      {% endautoescape %}
+    {% endfor %}
+</body>
+
+</html>
